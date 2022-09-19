@@ -12,7 +12,7 @@
   --primary-logo-color: #2196f3;
   --secondary-logo-color: #ffffff;
   --contacts-color: rgba(255, 255, 255, 0.6);
-  --button-secondary-color: #f5f4fa;
+  --btn-secondary-color: #f5f4fa;
   --card-border-color: #eeeeee;
 }
 
@@ -184,10 +184,10 @@ body {
   list-style: none;
 }
 
-/* button-secondary */
+/* btn-secondary */
 .button-secondary {
-  color: var(--main-font-color)
-  background-color: var(--button-secondary-color);
+  color: var(--main-font-color);
+  background-color: var(--btn-secondary-color);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
@@ -198,6 +198,10 @@ body {
 .button-secondary:focus {
   color: var(--secondary-logo-color);
   background-color: var(--primary-logo-color);
+}
+
+.card {
+  outline: solid 1px var(--card-border-color);
 }
 
 /* Стилі заголовків портфоліо */
@@ -214,10 +218,6 @@ body {
   font-size: 14px;
   line-height: 1.88;
   letter-spacing: 0.03em;
-}
-
-.card {
-  outline: solid 1px var(--card-border-color);
 }
 
 
