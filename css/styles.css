@@ -3,7 +3,6 @@
 /* FFFFFF white logo color */
 /* 212121 h2 color */
 /* 757575 tel color */
-/* FFFFFF h1 color */
 /* 757575 p color */
 
 :root {
@@ -14,6 +13,7 @@
   --contacts-color: rgba(255, 255, 255, 0.6);
   --btn-secondary-color: #f5f4fa;
   --card-border-color: #eeeeee;
+  --footer-bgd-color: #2f303a;
 }
 
 body {
@@ -22,37 +22,55 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.link:visited {
+  color: var(--main-font-color);
+}
+
+.list {
+  list-style: none;
+}
+
+.capitalize {
+  text-transform: uppercase;
+}
+
 /* Стилі шапки */
 .menu {
   background-color: #ffffff;
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.14;
+  line-height: calc(16 / 14);
   letter-spacing: 0.02em;
 }
 
-.logo-link {
+.logo {
+  color: var(--primary-logo-color);
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
-  line-height: 1.19;
+  line-height: calc(31 / 26);
   letter-spacing: 0.03em;
   text-decoration: none;
 }
 
-.logo-link:visited {
-  color: #000000;
-}
-
-.logo-text-web {
-  color: var(--primary-logo-color);
-}
-
-.navi > .navi-items {
-  list-style: none;
-}
-
-.item > .link:visited {
+.logo-text-header {
   color: var(--main-font-color);
 }
 
@@ -61,37 +79,31 @@ body {
   color: var(--primary-logo-color);
 }
 
-.item > .link {
-  text-decoration: none;
-}
-
 .item > .link.current {
   color: var(--primary-logo-color);
 }
 
-.menu > .navi-contacts {
-  list-style: none;
-}
-
 .navi-contacts .navi-link {
-  text-decoration: none;
   color: var(--paragraph-color);
 }
 
 .item > .navi-link:hover,
-.navi-link:focus {
+.item > .navi-link:focus {
   color: var(--primary-logo-color);
 }
 
 /* Стилі героя */
+.hero {
+  background-color: var(--footer-bgd-color);
+}
+
 .hero-title {
   color: var(--secondary-logo-color);
   font-weight: 900;
   font-size: 44px;
-  line-height: 1.36;
+  line-height: calc(60 / 44);
   text-align: center;
   letter-spacing: 0.06em;
-  text-transform: uppercase;
 }
 
 /* Button-primary */
@@ -100,7 +112,7 @@ body {
   background-color: var(--primary-logo-color);
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.88;
+  line-height: calc(30 / 16);
   cursor: pointer;
 }
 
@@ -108,56 +120,48 @@ body {
 .section-title {
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.17;
+  line-height: calc(42 / 36);
   text-align: center;
   letter-spacing: 0.03em;
 }
 
 /* Стилі особливостей */
-.features-list {
-  list-style: none;
-}
 
 .features-title {
-  font-weight: 700;
   font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
+  line-height: calc(16 / 14);
 }
 
-.features-description {
+.features-desc {
   color: var(--paragraph-color);
   font-weight: 400;
   font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+  line-height: calc(24 / 14);
 }
 
 /* Стилі нашої команди */
-.team-list {
-  list-style: none;
-}
 
 .team-name {
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.19;
+  line-height: calc(19 / 16);
   text-align: center;
-  letter-spacing: 0.03em;
 }
 
 .team-role {
   color: var(--paragraph-color);
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.19;
+  line-height: calc(19 / 16);
   text-align: center;
-  letter-spacing: 0.03em;
 }
 
 /* Стилі підвалу */
-.logo-text-studio {
+.footer {
+  background-color: var(--footer-bgd-color);
+}
+
+.logo-text-footer {
   color: var(--secondary-logo-color);
 }
 
@@ -166,22 +170,20 @@ body {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 1.71;
+  line-height: calc(24 / 14);
   letter-spacing: 0.03em;
+}
+
+.address-link {
+  color: var(--secondary-logo-color);
+}
+
+.address-link:visited {
+  color: var(--secondary-logo-color);
 }
 
 .footer-link {
   color: var(--contacts-color);
-  text-decoration: none;
-}
-
-.footer-link:hover,
-.footer-link:focus {
-  color: var(--primary-logo-color);
-}
-
-.filter {
-  list-style: none;
 }
 
 /* btn-secondary */
@@ -208,7 +210,7 @@ body {
 .portfolio-title {
   font-weight: 700;
   font-size: 18px;
-  line-height: 2.0;
+  line-height: 2;
   letter-spacing: 0.06em;
 }
 
@@ -219,5 +221,3 @@ body {
   line-height: 1.88;
   letter-spacing: 0.03em;
 }
-
-
